@@ -1,0 +1,257 @@
+<html>
+  <head>
+      <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+      <!--<link rel="stylesheet" href="general.css">-->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css">
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.js"></script>
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js"></script>
+			<link rel="stylesheet" href="general.css">
+    <!--  <link rel="script" herf="Ticker.js">-->
+
+
+			<script type="text/javascript">
+				function StartDragSelect(obj)
+				{
+					if (obj.className == "selected")
+					{
+						obj.className = "";
+						selectNum--;
+					}
+					else
+					{
+						obj.className = "selected";
+						selectNum++;
+					}
+					document.getElementById("selectCount").innerHTML =
+				}
+				obj.onmouseup = function()
+				{
+		 			for(i=1;i<11;i++)
+					{
+						document.getElementById(i+'d').onmousedown = document.getElementById(i+'d').onmouseover;
+						document.getElementById(i+'d').onmouseover = null;
+			 		}
+				}
+
+			</script>
+			<script type="text/javascript">
+				var WLTicker3 = document.getElementById("3dl").value;
+				var WLTicker4 = document.getElementById("4dl");
+				var WLTicker5 = document.getElementById("5dl");
+				var WLTicker6 = document.getElementById("6dl");
+				var WLTicker7 = document.getElementById("7dl");
+				var WLTicker8 = document.getElementById("8dl");
+				var WLTicker9 = document.getElementById("9dl");
+				var WLTicker10 = document.getElementById("10dl");
+				function checkvar3() {
+					var WLTicker3 = document.getElementById("3dl").value;
+					document.getElementById("demo").innerHTML = WLTicker3;
+				}
+			</script>
+
+
+			<script type="text/javascript">
+				$(document).ready(function() {
+
+					$('#calendar').fullCalendar({
+						header: {
+							left: 'prev,next today',
+							center: 'title',
+							right: 'month,basicWeek,basicDay'
+						},
+						defaultDate: '2016-12-12',
+						navLinks: true, // can click day/week names to navigate views
+						editable: true,
+						eventLimit: true, // allow "more" link when too many events
+						events: [
+							{
+								title: 'All Day Event',
+								start: '2016-12-01'
+							},
+							{
+								title: 'Long Event',
+								start: '2016-12-07',
+								end: '2016-12-10'
+							},
+							{
+								id: 999,
+								title: 'Repeating Event',
+								start: '2016-12-09T16:00:00'
+							},
+							{
+								id: 999,
+								title: 'Repeating Event',
+								start: '2016-12-16T16:00:00'
+							},
+							{
+								title: 'Conference',
+								start: '2016-12-11',
+								end: '2016-12-13'
+							},
+							{
+								title: 'Meeting',
+								start: '2016-12-12T10:30:00',
+								end: '2016-12-12T12:30:00'
+							},
+							{
+								title: 'Lunch',
+								start: '2016-12-12T12:00:00'
+							},
+							{
+								title: 'Meeting',
+								start: '2016-12-12T14:30:00'
+							},
+							{
+								title: 'Happy Hour',
+								start: '2016-12-12T17:30:00'
+							},
+							{
+								title: 'Dinner',
+								start: '2016-12-12T20:00:00'
+							},
+							{
+								title: 'Birthday Party',
+								start: '2016-12-13T07:00:00'
+							},
+							{
+								title: 'Click for Google',
+								url: 'https://google.com/',
+								start: '2016-12-28'
+							}
+						]
+					});
+
+				});
+			</script>
+		</head>
+		<body>
+<!--<div class="header">
+	<a href="#default" class="logo">CompanyLogo</a>
+	<div class="header-right">
+		<a class="active" href="#home">Home</a>
+		<a href="#contact">Contact</a>
+		<a href="#about">About</a>
+	</div>
+</div>
+
+<div style="padding-left:20px">
+	<h1>Responsive Header</h1>
+	<p>Resize the browser window to see the effect.</p>
+	<p>Some content..</p>
+</div>-->
+			<div>
+
+				<table class="WatchTable">
+					<tr>
+						<th class="StockListHeader1">Watch List</th>
+						<th class="StockListHeader2">Recent Trades</th>
+					</tr>
+					<tr>
+						<td class="WatchlistContent"><div class="Test4" id="1td" onmousedown="StartDragSelect(this);"><input class="WLInput" id="1dl" type="text" maxlength="4" style="text-transform:uppercase"></div>
+							<div class="hide">
+				<!-- TradingView Widget BEGIN -->
+								<div class="tradingview-widget-container">
+									<div id="tradingview_43cdb"></div>
+									<div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/TSLA/" rel="noopener" target="_blank"><span class="blue-text">TSLA Chart</span></a> by TradingView</div>
+									<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+									<script type="text/javascript">
+									checkvarx() {
+										var x = document.getElementById("1dl").value;
+									}
+									new TradingView.widget(
+									{
+										"width": 490,
+										"height": 305,
+										"symbol": checkvarx(x),
+										"interval": "D",
+										"timezone": "Etc/UTC",
+										"theme": "dark",
+										"style": "1",
+										"locale": "en",
+										"toolbar_bg": "#f1f3f6",
+										"enable_publishing": false,
+										"allow_symbol_change": true,
+										"show_popup_button": true,
+										"popup_width": "1000",
+										"popup_height": "650",
+										"container_id": "tradingview_43cdb"
+									}
+								);
+							</script>
+						</div>
+<!-- TradingView Widget END --></div></td>
+			<th class="WatchlistContent"><div id="2td" onmousedown="StartDragSelect(this);">Box2</div></th>
+		</tr>
+		<tr>
+			<td class="WatchlistContent"><div id="3d" onmousedown="StartDragSelect(this);"><input class="WLInput" id="3dl" type="text" maxlength="4" style="text-transform:uppercase"></div></td>
+			<td class="RecentTradesContent"><div id="4d" onmousedown="StartDragSelect(this);"><input class="RTInput" id="4dl" type="text" maxlength="4" style="text-transform:uppercase"></div></td>
+		</tr>
+		<tr>
+			<td class="WatchlistContent"><div id="5d" onmousedown="StartDragSelect(this);"><input class="WLInput" id="5dl" type="text" maxlength="4" style="text-transform:uppercase"></div></td>
+			<td class="RecentTradesContent"><div id="6d" onmousedown="StartDragSelect(this);"><input class="RTInput" id="6dl" type="text" maxlength="4" style="text-transform:uppercase"></div></td>
+		</tr>
+		<tr>
+			<td class="WatchlistContent"><div id="7d" onmousedown="StartDragSelect(this);"><input class="WLInput" id="7dl" type="text" maxlength="4" style="text-transform:uppercase"></div></td>
+			<td class="RecentTradesContent"><div id="8d" onmousedown="StartDragSelect(this);"><input class="RTInput" id="8dl" type="text" maxlength="4" style="text-transform:uppercase"></div></td>
+		</tr>
+		<tr>
+			<td class="WatchlistContent"><div id="9d" onmousedown="StartDragSelect(this);"><input class="WLInput" id="9dl" type="text" maxlength="4" style="text-transform:uppercase"></div></td>
+			<td class="RecentTradesContent"><div id="10d" onmousedown="StartDragSelect(this);"><input class="RTInput" id="10dl" type="text" maxlength="4" style="text-transform:uppercase"></div></td>
+		</tr>
+
+	</table>
+
+
+
+	<button onclick="checkvar3()"></button>
+	<p id="demo"></p>
+
+
+
+	<div class="ui container">
+
+  <div class="ui menu">
+    <div class="header item">Brand</div>
+    <a class="active item">Link</a>
+    <a class="item">Link</a>
+    <div class="ui dropdown item">
+      Dropdown
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <div class="item">Action</div>
+        <div class="item">Another Action</div>
+        <div class="item">Something else here</div>
+        <div class="divider"></div>
+        <div class="item">Separated Link</div>
+        <div class="divider"></div>
+        <div class="item">One more separated link</div>
+      </div>
+    </div>
+    <div class="right menu">
+     <!-- <div class="item">
+        <div class="ui action left icon input">
+          <i class="search icon"></i>
+          <input type="text" placeholder="Search">
+          <button class="ui button">Submit</button>
+        </div>
+      </div>-->
+      <a class="item">Link</a>
+    </div>
+  </div>
+</div>
+
+<br/>
+<div class="ui container">
+  <div class="ui grid">
+    <div class="ui sixteen column">
+      <div id="calendar"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

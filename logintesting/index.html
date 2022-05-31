@@ -1,0 +1,90 @@
+<html>
+
+<head>
+	<title>Register</title>
+	<meta http-equiv="cache-control" content="max-age=0">
+ 	<meta http-equiv="cache-control" content="no-cache">
+ 	<meta http-equiv="expires" content="-1">
+ 	<meta http-equiv="expires" content="Tue, 01 Jan 1980 11:00:00 GMT">
+ 	<meta http-equiv="pragma" content="no-cache">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="homebutton" id="homehead">
+				Home
+			</div>
+		</div>
+		<div class="form">
+			<div class="form-content">
+				<form id="formSubmission" action="index.php" method="POST">
+				<div class="form-title" style="text-align: center;">
+					Email:
+				</div>
+				<div class="form-field" style="text-align: center;">
+					<input type="text" name="email" id="email" class="form-input">
+				</div>
+				<div class="form-title">
+					Password:
+				</div>
+				<div class="form-field">
+					<input type="text" name="password" id="password" class="form-input">
+				</div>
+			</div>
+		</div>
+		<div>
+                        <!-- <input type="submit" value="Submit" class="submitButton"> -->
+                        <input type="hidden" name="hiddenVars" id="hiddenVars" value="">
+                        <input type="hidden" name="mode" id="mode" value="">
+                        <input type="hidden" name="referral" id="referral" value="Purchase Intake">
+                        <div class="button submitButton" id="submitForm" style="vertical-align:middle"><span>Submit </span></div>
+                </div>
+
+	</div>
+
+
+<script>
+	let mode = "";
+
+	document.querySelector("#date").value = new Date().toLocaleString();
+	
+	let form = document.getElementById("formSubmission");
+
+	document.getElementById("submitForm").addEventListener("click", function() {
+        serial = document.getElementById("serialnumber").value,
+        device = document.getElementById("device").value;
+
+        if (mode == "") {
+            alert("Something went wrong setting the mode.");
+        } else {
+            if (serial == "" || device == "") {
+                alert("A field needs some data.");
+            } else {
+                $(':disabled').each(function(e) {
+                    $(this).removeAttr('disabled');
+                });
+
+                let vars = (mode != "" && mode == "phone") ? phoneitemclick : compitemclick;
+                console.log(vars);
+                //alert(vars);
+                document.getElementById("hiddenVars").value = JSON.stringify(vars);
+                document.getElementById("mode").value = mode;
+                form.submit();
+            }
+        }
+    });
+
+	$("#homehead").click(function() {
+		window.location = "../";
+    	});
+
+
+</script>
+
+
+</body>

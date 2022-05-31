@@ -1,0 +1,181 @@
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+/* Month header */
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #1abc9c;
+  text-align: center;
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color:#ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+.Watchlist {
+  color: black;
+  background-color: #04AA6D;
+}
+.hide {
+  display: none;
+}
+.Test4:hover + .hide {
+  display: block;
+}
+/*.WatchlistContent {
+  border: 1px solid;
+}*/
+/*table {
+  -moz-border-radius: 5px !important;
+  border-collapse: collapse !important;
+  border: none !important;
+}
+table th,
+table td {
+  border: none !important;
+}
+table th:first-child {
+  -moz-border-radius: 5px 0 0 0 !important;
+}
+table th:last-child {
+  -moz-border-radius: 0 5px 0 0 !important;
+}
+table tr:last-child td:first-child {
+  -moz-border-radius: 0 0 0 5px !important;
+}
+table tr:last-child td:last-child {
+  -moz-border-radius: 0 0 5px 0 !important;
+}
+table tr:hover td {
+  background-color: blue !important;
+}*/
+/*.WatchTable {
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+  border-collapse: collapse;
+  border-radius: 25px;
+  border: 2px solid black;
+}*/
+.WatchTable {
+  border-top: 2px solid black;
+}
+/*.StockListHeader1 {
+  padding: 10px;
+  border-top-left-radius: 25px;
+  border: 2px solid black;
+  background-color: rgba(0,0,0,0);
+  border-bottom: 2px solid black;
+  border-collapse: collapse;
+}*/
+/*.StockListHeader2 {
+  padding: 10px;
+  padding-left: -20px;
+  border-top-right-radius: 25px;
+  border: 2px solid black;
+  border-bottom: 2px solid black;
+  border-collapse: collapse;
+}*/
+.StockListHeader1 {
+  border-right: 1px solid black;
+  border-collapse: collapse;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.StockListHeader2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.WatchlistContent {
+  border-right: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 10px;
+}
+.RecentTradesContent {
+  text-align: center;
+  padding: 10px;
+}
+.WatchlistContentlast {
+  padding: 10px;
+  border-bottom-left-radius: 25px;
+  border: 2px solid black;
+}
+.RecentTradesContentlast {
+  padding: 10px;
+  border-bottom-left-radius: 25px;
+  border: 2px solid black;
+}
+.WLInput {
+  /*border: none;*/
+  text-align: center;
+  width: 50px;
+}
+.RTInput {
+  /*border: none;*/
+  text-align: center;
+  width: 50px;
+}

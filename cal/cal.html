@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="cal.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="calendar.js" charset="utf-8"></script>
+    <meta charset="utf-8">
+    <title>calendar</title>
+  </head>
+  <body>
+    <button type="button" name="button" id = "create" onclick = "createCalendar()">calendar</button>
+    <table id="calendar">
+    </table>
+    <p> Date: <input type="text" name="" value="" id = "inDate"> Event: <input type="text" name="" value="" id = "inEvent"> </p>
+    <button type="button" name="button" onclick = "addEvent(), updateCalendar()">update</button>
+  </body>
+</html>
